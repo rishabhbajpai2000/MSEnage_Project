@@ -2034,3 +2034,8 @@ section {
   font-size: 13px;
   color: #012970;
 }
+/* edits by rishabh */
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}
