@@ -10,8 +10,14 @@
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon" />
-    <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon" />
+    <link
+      href="{{ url_for('static', filename='assets/img/favicon.png') }}"
+      rel="icon"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}"
+      rel="apple-touch-icon"
+    />
 
     <!-- Google Fonts -->
     <link
@@ -20,7 +26,10 @@
     />
 
     <!-- Vendor CSS Files -->
-    <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet" />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}"
+      rel="stylesheet"
+    />
     <link
       href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}"
       rel="stylesheet"
@@ -28,18 +37,26 @@
     <link
       href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}"
       rel="stylesheet"
-    >
+    />
     <link
       href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}"
       rel="stylesheet"
     />
-    <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet" />
-    <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet" />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}"
+      rel="stylesheet"
+    />
 
     <!-- Template Main CSS File -->
-    <link href="{{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet" />
+    <link
+      href="{{ url_for('static', filename='assets/css/style.css')}}"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{{ url_for('static', filename='')}}" />
-
   </head>
 
   <body>
@@ -49,7 +66,10 @@
         class="container-fluid container-xl d-flex align-items-center justify-content-between"
       >
         <a href="/" class="logo d-flex align-items-center">
-          <img src="{{ url_for('static', filename='assets/img/logo.png')}}" alt="" />
+          <img
+            src="{{ url_for('static', filename='assets/img/logo.png')}}"
+            alt=""
+          />
           <span>CarNow</span>
         </a>
 
@@ -77,10 +97,10 @@
         <div class="row">
           <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h1 data-aos="fade-up">
-              We offer modern solutions for growing your business
+              A fun and interactive way to look for the best car for you
             </h1>
             <h2 data-aos="fade-up" data-aos-delay="400">
-              We are team of talented designers making websites with Bootstrap
+              
             </h2>
             <div data-aos="fade-up" data-aos-delay="600">
               <div class="text-center text-lg-start">
@@ -99,7 +119,11 @@
             data-aos="zoom-out"
             data-aos-delay="200"
           >
-            <img src="{{ url_for('static', filename='assets/img/hero-img.png')}}" class="img-fluid" alt="" />
+            <img
+              src="{{ url_for('static', filename='assets/img/hero-img.png')}}"
+              class="img-fluid"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -116,10 +140,20 @@
             <h2>Tell your requirements, we will find the best choice</h2>
           </header>
 
-          <form name="sentMessage" action = "/" method="post" novalidate autocomplete="off">
+          <form
+            name="sentMessage"
+            action="/"
+            method="post"
+            novalidate
+            autocomplete="off"
+          >
             <div class="row">
               <div class="col-lg-6">
-                <img src="{{ url_for('static', filename='assets/img/car.jpg')}}" class="img-fluid" alt="" />
+                <img
+                  src="{{ url_for('static', filename='assets/img/car.jpg')}}"
+                  class="img-fluid"
+                  alt=""
+                />
               </div>
 
               <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
@@ -207,6 +241,7 @@
                         required
                       />
                     </div>
+
                   </div>
 
                   <div
@@ -230,7 +265,7 @@
           <div class="row feture-tabs" data-aos="fade-up">
             <div class="col-lg-6">
               <h3>
-                we have selected Top-3 cars for you
+                we have selected Top-5 cars for you
                 <br />
                 Based on your preferences
               </h3>
@@ -239,7 +274,7 @@
               <ul class="nav nav-pills mb-3">
                 <li>
                   <a class="nav-link active" data-bs-toggle="pill" href="#tab1"
-                    >Car 1</a
+                    >First One</a
                   >
                 </li>
                 <li>
@@ -250,6 +285,16 @@
                 <li>
                   <a class="nav-link" data-bs-toggle="pill" href="#tab3"
                     >Third one</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link" data-bs-toggle="pill" href="#tab4"
+                    >fourth one</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link" data-bs-toggle="pill" href="#tab5"
+                    >fifth one</a
                   >
                 </li>
               </ul>
@@ -346,10 +391,72 @@
                   </p>
                 </div>
                 <!-- End Tab 3 Content -->
+                <div class="tab-pane fade show" id="tab4">
+                  <p>
+                    tab 4 content
+                    Eos doloribus expedita. Sapiente atque consequatur minima
+                    nihil quae aspernatur quo suscipit voluptatem.
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>
+                      Repudiandae rerum velit modi et officia quasi facilis
+                    </h4>
+                  </div>
+                  <p>
+                    tab 4 content 
+                    blanditiis. Sapiente minima commodi dolorum non eveniet
+                    magni quaerat nemo et.
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  </div>
+                  <p>
+                    Non quod totam minus repellendus autem sint velit. Rerum
+                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
+                    qui inventore eligendi voluptates nisi at. Dolorem quo
+                    tempora. Quia et perferendis.
+                  </p>
+                </div>
+                <!-- End Tab 4 Content -->
+                <div class="tab-pane fade show" id="tab5">
+                  <p>
+                    Consequuntur inventore voluptates consequatur aut vel et.
+                    Eos doloribus expedita. Sapiente atque consequatur minima
+                    nihil quae aspernatur quo suscipit voluptatem.
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>
+                      Repudiandae rerum velit modi et officia quasi facilis
+                    </h4>
+                  </div>
+                  <p>
+                    Laborum omnis voluptates voluptas qui sit aliquam
+                    blanditiis. Sapiente minima commodi dolorum non eveniet
+                    magni quaerat nemo et.
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  </div>
+                  <p>
+                    Non quod totam minus repellendus autem sint velit. Rerum
+                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
+                    qui inventore eligendi voluptates nisi at. Dolorem quo
+                    tempora. Quia et perferendis.
+                  </p>
+                </div>
+                <!-- End Tab 5 Content -->
               </div>
             </div>
             <div class="col-lg-6">
-              <img src="{{ url_for('static', filename='assets/img/Car2.jpg')}}" class="img-fluid" alt="" />
+              <img
+                src="{{ url_for('static', filename='assets/img/Car2.jpg')}}"
+                class="img-fluid"
+                alt=""
+              />
             </div>
           </div>
           <!-- End Feature Tabs -->
@@ -502,9 +609,7 @@
                   Eum ad dolor et. Autem aut fugiat debitis voluptatem
                   consequuntur sit
                 </h3>
-                <a
-                  href="/blog"
-                  class="readmore stretched-link mt-auto"
+                <a href="/blog" class="readmore stretched-link mt-auto"
                   ><span>Read More</span><i class="bi bi-arrow-right"></i
                 ></a>
               </div>
@@ -523,14 +628,11 @@
                 <h3 class="post-title">
                   Et repellendus molestiae qui est sed omnis voluptates magnam
                 </h3>
-                <a
-                  href="/blog"
-                  class="readmore stretched-link mt-auto"
+                <a href="/blog" class="readmore stretched-link mt-auto"
                   ><span>Read More</span><i class="bi bi-arrow-right"></i
                 ></a>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -574,7 +676,11 @@
               data-aos="zoom-out"
               data-aos-delay="200"
             >
-              <img src="{{ url_for('static', filename='assets/img/about.jpg')}}" class="img-fluid" alt="" />
+              <img
+                src="{{ url_for('static', filename='assets/img/about.jpg')}}"
+                class="img-fluid"
+                alt=""
+              />
             </div>
           </div>
         </div>
