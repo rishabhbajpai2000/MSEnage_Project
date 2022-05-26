@@ -99,9 +99,7 @@
             <h1 data-aos="fade-up">
               A fun and interactive way to look for the best car for you
             </h1>
-            <h2 data-aos="fade-up" data-aos-delay="400">
-              
-            </h2>
+            <h2 data-aos="fade-up" data-aos-delay="400"></h2>
             <div data-aos="fade-up" data-aos-delay="600">
               <div class="text-center text-lg-start">
                 <a
@@ -139,7 +137,7 @@
             <br />
             <h2>Tell your requirements, we will find the best choice</h2>
           </header>
-
+          <!-- issue: required is not workign -->
           <form
             name="sentMessage"
             action="/"
@@ -159,7 +157,7 @@
               <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
                 <div class="row align-self-center gy-4">
                   <div
-                    class="col-md-6"
+                    class="col-md-7"
                     data-aos="zoom-out"
                     data-aos-delay="200"
                   >
@@ -167,33 +165,41 @@
                       <input
                         type="text"
                         class="form-control no-border"
-                        id="cost"
-                        placeholder="Cost"
-                        name="cost"
+                        id="cost_min"
+                        placeholder="Cost Min"
+                        name="cost_min"
                         required
+                      />
+                      <input
+                        type="text"
+                        class="form-control no-border"
+                        id="cost_max"
+                        placeholder="Cost Max"
+                        name="cost_max"
+                        required = "required"
                       />
                     </div>
                   </div>
 
                   <div
-                    class="col-md-6"
+                    class="col-md-5"
                     data-aos="zoom-out"
                     data-aos-delay="300"
                   >
                     <div class="feature-box d-flex align-items-center">
                       <input
+                        required
                         type="text"
                         class="form-control no-border"
                         id="brand"
                         placeholder="Brand"
                         name="brand"
-                        required
                       />
                     </div>
                   </div>
 
                   <div
-                    class="col-md-6"
+                    class="col-md-7"
                     data-aos="zoom-out"
                     data-aos-delay="300"
                   >
@@ -201,51 +207,73 @@
                       <input
                         type="text"
                         class="form-control no-border"
-                        id="milege"
-                        placeholder="Milege (KMPL)"
-                        name="milege"
+                        id="mileage_min"
+                        placeholder="Milege Min"
+                        name="mileage_min"
                         required
                       />
+                      <input
+                        type="text"
+                        class="form-control no-border"
+                        id="mileage_max"
+                        placeholder="Max"
+                        name="mileage_max"
+                        required
+                      />
+                    
                     </div>
                   </div>
 
                   <div
-                    class="col-md-6"
+                    class="col-md-5"
                     data-aos="zoom-out"
                     data-aos-delay="300"
                   >
                     <div class="feature-box d-flex align-items-center">
-                      <input
-                        type="text"
-                        class="form-control no-border"
+                      <select
+                        class="form-select no-border"
+                        aria-label="Default select example"
+                        name = "type"
                         id="type"
-                        placeholder="Petrol/Diesel/CNG"
-                        name="type"
-                        required
-                      />
+                      >
+                        <option selected>Petol/CNG/Diesel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                      </select>
+                      
                     </div>
                   </div>
 
                   <div
-                    class="col-md-6"
+                    class="col-md-7"
                     data-aos="zoom-out"
                     data-aos-delay="300"
                   >
                     <div class="feature-box d-flex align-items-center">
-                      <input
-                        type="text"
-                        class="form-control no-border"
-                        id="seating"
-                        placeholder="Seating"
-                        name="seating"
-                        required
-                      />
-                    </div>
+                      <select
+                        class="form-select no-border"
+                        aria-label="Default select example"
+                        name = "Seating_Cap"
+                        id="Seating_Cap"
+                      >
+                      <option selected>Seating</option>
+                      <option value=2 >2</option>
+                      <option value=4 >4</option>
+                      <option value=5 >5</option>
+                      <option value=6 >6</option>
+                      <option value=7 >7</option>
+                      <option value=8 >8</option>
+                      <option value=9 >9</option>
+                      <option value=16>16</option>
+                        
+                      </select>
 
+                    </div>
                   </div>
 
                   <div
-                    class="col-md-6"
+                    class="col-md-5"
                     data-aos="zoom-out"
                     data-aos-delay="700"
                   >
@@ -265,36 +293,34 @@
           <div class="row feture-tabs" data-aos="fade-up">
             <div class="col-lg-6">
               <h3>
-                we have selected Top-5 cars for you
-                <br />
-                Based on your preferences
+              Top 5 Cars of 22
               </h3>
 
               <!-- Tabs -->
               <ul class="nav nav-pills mb-3">
                 <li>
                   <a class="nav-link active" data-bs-toggle="pill" href="#tab1"
-                    >First One</a
+                    >Scorpio</a
                   >
                 </li>
                 <li>
                   <a class="nav-link" data-bs-toggle="pill" href="#tab2"
-                    >Second one</a
+                    >Thar</a
                   >
                 </li>
                 <li>
                   <a class="nav-link" data-bs-toggle="pill" href="#tab3"
-                    >Third one</a
+                    >XUV </a
                   >
                 </li>
                 <li>
                   <a class="nav-link" data-bs-toggle="pill" href="#tab4"
-                    >fourth one</a
+                    >Creta</a
                   >
                 </li>
                 <li>
                   <a class="nav-link" data-bs-toggle="pill" href="#tab5"
-                    >fifth one</a
+                    >Fortuner</a
                   >
                 </li>
               </ul>
@@ -325,6 +351,13 @@
                   </div>
                   <p>
                     Non quod totam minus repellendus autem sint velit. Rerum
+                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
+                    qui inventore eligendi voluptates nisi at. Dolorem quo
+                    tempora. Quia et perferendis.
+                    Non quod totam minus repellendus autem sint velit. Rerum
+                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
+                    qui inventore eligendi voluptates nisi at. Dolorem quo
+                    tempora. Quia et perferendis.Non quod totam minus repellendus autem sint velit. Rerum
                     debitis facere soluta tenetur. Iure molestiae assumenda sunt
                     qui inventore eligendi voluptates nisi at. Dolorem quo
                     tempora. Quia et perferendis.
@@ -393,9 +426,9 @@
                 <!-- End Tab 3 Content -->
                 <div class="tab-pane fade show" id="tab4">
                   <p>
-                    tab 4 content
-                    Eos doloribus expedita. Sapiente atque consequatur minima
-                    nihil quae aspernatur quo suscipit voluptatem.
+                    tab 4 content Eos doloribus expedita. Sapiente atque
+                    consequatur minima nihil quae aspernatur quo suscipit
+                    voluptatem.
                   </p>
                   <div class="d-flex align-items-center mb-2">
                     <i class="bi bi-check2"></i>
@@ -404,9 +437,8 @@
                     </h4>
                   </div>
                   <p>
-                    tab 4 content 
-                    blanditiis. Sapiente minima commodi dolorum non eveniet
-                    magni quaerat nemo et.
+                    tab 4 content blanditiis. Sapiente minima commodi dolorum
+                    non eveniet magni quaerat nemo et.
                   </p>
                   <div class="d-flex align-items-center mb-2">
                     <i class="bi bi-check2"></i>
@@ -452,6 +484,7 @@
               </div>
             </div>
             <div class="col-lg-6">
+              <!-- issue: remove background of this photo to load faster -->
               <img
                 src="{{ url_for('static', filename='assets/img/Car2.jpg')}}"
                 class="img-fluid"
