@@ -32,11 +32,9 @@
                 <div class="feature-box d-flex align-items-center">
                   <label for="cost_min">Cost:</label>
                   <input required type="number" class="form-control no-border"
-                  id="cost_min" placeholder="Min"
-                  value={{inp_data["cost_min"]}} name="cost_min">
-
-                  <input type="number" class="form-control no-border"
-                  id="cost_max" placeholder={{inp_data["cost_max"]}}
+                  id="cost_min" placeholder="Min" value={{inp_data["cost_min"]}}
+                  name="cost_min"> <input type="number" class="form-control
+                  no-border" id="cost_max" placeholder={{inp_data["cost_max"]}}
                   name="cost_max" required>
                 </div>
               </div>
@@ -86,7 +84,6 @@
                     <option value="Tata">Tata</option>
                     <option value="Toyota">Toyota</option>
                     <option value="Volkswagen">Volkswagen</option>
-              
                   </select>
                   <!-- <input required type="text" class="form-control no-border"
                   id="brand" placeholder={{inp_data["brand"]}} name="brand" > -->
@@ -161,22 +158,27 @@
       <!-- / row -->
     </div>
     <!-- Feature Tabs -->
-    <div class="row feture-tabs" data-aos="fade-up" id="second" style="padding-left:10%">
+    <div
+      class="row feture-tabs"
+      data-aos="fade-up"
+      id="second"
+      style="padding-left: 10%"
+    >
       <div class="col-lg-6">
         <h3>{{cars_line}}</h3>
 
         <!-- Tabs -->
         <ul class="nav nav-pills mb-3">
-         {% for i in range(0, count) %}
-         <li>
-           <a class="nav-link" data-bs-toggle="pill" href="#tab{{i}}"
-           >{{cars_found.iloc[i]["Model"]}}</a
-           >
+          {% for i in range(0, count) %}
+          <li>
+            <a class="nav-link" data-bs-toggle="pill" href="#tab{{i}}"
+              >{{cars_found.iloc[i]["Model"]}}</a
+            >
           </li>
           {% endfor %}
         </ul>
         <!-- End Tabs -->
-        
+
         <!-- Tab Content -->
         <div class="tab-content" id>
           {% if count>0 %}
@@ -201,11 +203,19 @@
                 <td>{{cars_found.iloc[0]["Fuel_Type"]}}</td>
               </tr>
             </table>
+            <p>
+              The car recommended to you is
+              {{cars_found.iloc[0]["Make"]}}-{{cars_found.iloc[0]["Model"]}}
+              with a seating capacity of
+              {{cars_found.iloc[0]["Seating_Capacity"]}}.This car is available
+              in 10 shades .It has airbags provided with it and also camera is
+              placed for parking.The cost price of the car is
+              {{cars_found.iloc[0]["Ex-Showroom_Price"]}} with a mileage of
+              {{cars_found.iloc[0]["ARAI_Certified_Mileage_kmpl"]}} kmpl.
+            </p>
           </div>
           <!-- End Tab 1 Content -->
-          {% endif %}
-
-          {% if count>1 %}
+          {% endif %} {% if count>1 %}
           <div class="tab-pane fade show" id="tab1">
             <table class="table">
               <tr>
@@ -227,6 +237,15 @@
                 <td>{{cars_found.iloc[1]["Fuel_Type"]}}</td>
               </tr>
             </table>
+            <p>
+              The average performance of the car is great and better than most
+              of the cars in this range. With its automatic fluid lid opener you
+              won't ever need to go outside in scratching summer beat. It body
+              type is {{cars_found.iloc[1]["Body_Type"]}} with
+              {{cars_found.iloc[1]["Doors"]}} doors. It has four cup holders
+              with a charging point for gadgets. It provides warranty of 3
+              years. The car is very comforting and has airbags also.
+            </p>
           </div>
           {% endif %}
           <!-- End Tab 2 Content -->
@@ -253,10 +272,16 @@
                 <td>{{cars_found.iloc[2]["Fuel_Type"]}}</td>
               </tr>
             </table>
-            >
+            <p>
+              We suggest you a brilliant car with a super elegant look from this
+              brand called
+              {{cars_found.iloc[2]["Make"]}}-{{cars_found.iloc[2]["Model"]}} .
+              It has a seating capacity of
+              {{cars_found.iloc[2]["Seating_Capacity"]}} with the
+              {{cars_found.iloc[2]["Ex-Showroom_Price"]}} price tag.
+            </p>
           </div>
           {% endif %}
-
 
           <!-- End Tab 3 Content -->
           {% if count>3 %}
@@ -281,6 +306,16 @@
                 <td>{{cars_found.iloc[3]["Fuel_Type"]}}</td>
               </tr>
             </table>
+            <p>
+              The car was produced by {{cars_found.iloc[3]["Make"]}}.It provides
+              a mikeage of
+              {{cars_found.iloc[3]["ARAI_Certified_Mileage_kmpl"]}}kmpl. The car
+              is powered by a {{cars_found.iloc[3]["Fuel_Tank_Capacity"]}}
+              {{cars_found.iloc[3]["Fuel_Type"]}} a car with a powerful
+              {{cars_found.iloc[3]["Displacement"]}} engineThis will provide the
+              largest possible reduction in ratings when used with
+              {{cars_found.iloc[3]["Emission"]}}
+            </p>
           </div>
           {% endif %}
           <!-- End Tab 4 Content -->
@@ -306,6 +341,14 @@
                 <td>{{cars_found.iloc[4]["Fuel_Type"]}}</td>
               </tr>
             </table>
+            <p>
+              It has a super smooth gliding glass used in windows. The car body
+              is {{cars_found.iloc[4]["Body_Type"]}} and the door is
+              {{cars_found.iloc[4]["Doors"]}}.It has a Analog speedometer that
+              allows great visibility in all types of weather.It also comes with
+              a start button that allows keyless entry. Any problem can be
+              easily solved without any problems thanks to the 2 years warranty.
+            </p>
           </div>
           {% endif %}
           <!-- End Tab 5 Content -->
@@ -323,5 +366,5 @@
     <!-- End Feature Tabs -->
   </section>
   <!-- End Whats Your Car Section -->
-{% endblock %}
+  {% endblock %}
 </main>

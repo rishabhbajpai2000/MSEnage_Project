@@ -60,8 +60,4 @@ def cars(cost_min, cost_max, brand, mileage_min, mileage_max, p_d_cng, seating, 
 
 
 
-# def car_found_desc(data):
-    # this fuction will take the output 5 rows data frame to generate a text description of it
-    # input: 5 row pandas dataframw
-    # output: an array of len 5, where ith index will contain description of ith car, in around 70 words
 
