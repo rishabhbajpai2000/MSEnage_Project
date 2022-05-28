@@ -12,7 +12,7 @@
       <!-- issue: required is not workign -->
       <form
         name="sentMessage"
-        action="/#top5cars"
+        action="/#second"
         method="post"
         novalidate
         autocomplete="off"
@@ -26,29 +26,20 @@
             />
           </div>
 
-
-
-
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
             <div class="row align-self-center gy-4">
               <div class="col-md-7" data-aos="zoom-out" data-aos-delay="200">
                 <div class="feature-box d-flex align-items-center">
-                 
+                  <label for="cost_min">Cost:</label>
+                  <input required type="number" class="form-control no-border"
+                  id="cost_min" placeholder="Min"
+                  value={{inp_data["cost_min"]}} name="cost_min">
+
                   <input type="number" class="form-control no-border"
-                  id="cost_min" placeholder="Cost Min"
-                  value={{inp_data["cost_min"]}}
-                  name="cost_min" required>
-                  
-                  <input type="number"
-                  class="form-control no-border" id="cost_max"
-                  placeholder={{inp_data["cost_max"]}} name="cost_max" required
-                  >
+                  id="cost_max" placeholder={{inp_data["cost_max"]}}
+                  name="cost_max" required>
                 </div>
               </div>
-
-
-
-              
 
               <div class="col-md-5" data-aos="zoom-out" data-aos-delay="300">
                 <div class="feature-box d-flex align-items-center">
@@ -59,11 +50,10 @@
 
               <div class="col-md-7" data-aos="zoom-out" data-aos-delay="300">
                 <div class="feature-box d-flex align-items-center">
+                  <label for="mileage_min">Mileage:</label>
                   <input type="number" class="form-control no-border"
                   id="mileage_min" placeholder={{inp_data["mileage_min"]}}
-                  name="mileage_min" required > 
-                  
-                  <input type="number"
+                  name="mileage_min" required > <input type="number"
                   class="form-control no-border" id="mileage_max"
                   placeholder={{inp_data["mileage_max"]}} name="mileage_max"
                   required >
@@ -109,7 +99,12 @@
 
               <div class="col-md-5" data-aos="zoom-out" data-aos-delay="700">
                 <div class="feature-box d-flex align-items-center">
-                  <button name = "santabanta" type="submit" class="btn btn-outline-primary" onclick="scrollxyz">
+                  <button
+                    name="santabanta"
+                    type="submit"
+                    class="btn btn-outline-primary"
+                    onclick="scrollxyz"
+                  >
                     Submit
                   </button>
                 </div>
@@ -119,160 +114,169 @@
         </div>
       </form>
       <!-- / row -->
+    </div>
+    <!-- Feature Tabs -->
+    <div class="row feture-tabs" data-aos="fade-up" id="second" style="padding-left:10%">
+      <div class="col-lg-6">
+        <h3>{{cars_line}}</h3>
 
-
-      <!-- Feature Tabs -->
-      <div class="row feture-tabs" data-aos="fade-up" id="top5cars">
-        <div class="col-lg-6" >
-          <h3>We have selected these top 5 cars for you</h3>
-
-          <!-- Tabs -->
-          <ul class="nav nav-pills mb-3">
-            {% for i in cars_found.index %}
-            <li>
-              <a class="nav-link" data-bs-toggle="pill" href="#tab{{i+1}}"
-                >{{cars_found["Model"][i]}}</a
-              >
-            </li>
-            {% endfor %}
-          </ul>
-          <!-- End Tabs -->
-
-          <!-- Tab Content -->
-          <div class="tab-content" >
-            <div class="tab-pane fade show active" id="tab1">
-              <table class="table">
-                <tr>
-                  <th scope="row">Brand:</th>
-                  <td>{{cars_found["Make"][0]}}</td>
-                  <th>Price:</th>
-                  <td>{{cars_found["Ex-Showroom_Price"][0]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mileage:</th>
-                  <td>{{cars_found["ARAI_Certified_Mileage_kmpl"][0]}}</td>
-                  <th>Engine:</th>
-                  <td>{{cars_found["Displacement"][0]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Seating:</th>
-                  <td>{{cars_found["Seating_Capacity"][0]}}</td>
-                  <th>Type:</th>
-                  <td>{{cars_found["Fuel_Type"][0]}}</td>
-                </tr>
-              </table>
-            </div>
-            <!-- End Tab 1 Content -->
-
-            <div class="tab-pane fade show" id="tab2">
-              <table class="table">
-                <tr>
-                  <th scope="row">Brand:</th>
-                  <td>{{cars_found["Make"][1]}}</td>
-                  <th>Price:</th>
-                  <td>{{cars_found["Ex-Showroom_Price"][1]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mileage:</th>
-                  <td>{{cars_found["ARAI_Certified_Mileage_kmpl"][1]}}</td>
-                  <th>Engine:</th>
-                  <td>{{cars_found["Displacement"][1]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Seating:</th>
-                  <td>{{cars_found["Seating_Capacity"][1]}}</td>
-                  <th>Type:</th>
-                  <td>{{cars_found["Fuel_Type"][1]}}</td>
-                </tr>
-              </table>
-            </div>
-            <!-- End Tab 2 Content -->
-
-            <div class="tab-pane fade show" id="tab3">
-              <table class="table">
-                <tr>
-                  <th scope="row">Brand:</th>
-                  <td>{{cars_found["Make"][2]}}</td>
-                  <th>Price:</th>
-                  <td>{{cars_found["Ex-Showroom_Price"][2]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mileage:</th>
-                  <td>{{cars_found["ARAI_Certified_Mileage_kmpl"][2]}}</td>
-                  <th>Engine:</th>
-                  <td>{{cars_found["Displacement"][2]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Seating:</th>
-                  <td>{{cars_found["Seating_Capacity"][2]}}</td>
-                  <th>Type:</th>
-                  <td>{{cars_found["Fuel_Type"][2]}}</td>
-                </tr>
-              </table>
-              >
-            </div>
-            <!-- End Tab 3 Content -->
-            <div class="tab-pane fade show" id="tab4">
-              <table class="table">
-                <tr>
-                  <th scope="row">Brand:</th>
-                  <td>{{cars_found["Make"][3]}}</td>
-                  <th>Price:</th>
-                  <td>{{cars_found["Ex-Showroom_Price"][3]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mileage:</th>
-                  <td>{{cars_found["ARAI_Certified_Mileage_kmpl"][3]}}</td>
-                  <th>Engine:</th>
-                  <td>{{cars_found["Displacement"][3]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Seating:</th>
-                  <td>{{cars_found["Seating_Capacity"][3]}}</td>
-                  <th>Type:</th>
-                  <td>{{cars_found["Fuel_Type"][3]}}</td>
-                </tr>
-              </table>
-            </div>
-            <!-- End Tab 4 Content -->
-            <div class="tab-pane fade show" id="tab5">
-              <table class="table">
-                <tr>
-                  <th scope="row">Brand:</th>
-                  <td>{{cars_found["Make"][4]}}</td>
-                  <th>Price:</th>
-                  <td>{{cars_found["Ex-Showroom_Price"][4]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mileage:</th>
-                  <td>{{cars_found["ARAI_Certified_Mileage_kmpl"][4]}}</td>
-                  <th>Engine:</th>
-                  <td>{{cars_found["Displacement"][4]}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Seating:</th>
-                  <td>{{cars_found["Seating_Capacity"][4]}}</td>
-                  <th>Type:</th>
-                  <td>{{cars_found["Fuel_Type"][4]}}</td>
-                </tr>
-              </table>
-            </div>
-            <!-- End Tab 5 Content -->
+        <!-- Tabs -->
+        <ul class="nav nav-pills mb-3">
+         {% for i in range(0, count) %}
+         <li>
+           <a class="nav-link" data-bs-toggle="pill" href="#tab{{i}}"
+           >{{cars_found.iloc[i]["Model"]}}</a
+           >
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- End Tabs -->
+        
+        <!-- Tab Content -->
+        <div class="tab-content" id>
+          {% if count>0 %}
+          <div class="tab-pane fade show active" id="tab0">
+            <table class="table">
+              <tr>
+                <th scope="row">Brand:</th>
+                <td>{{cars_found.iloc[0]['Make']}}</td>
+                <th>Price:</th>
+                <td>{{cars_found.iloc[0]['Ex-Showroom_Price']}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Mileage:</th>
+                <td>{{cars_found.iloc[0]['ARAI_Certified_Mileage_kmpl']}}</td>
+                <th>Engine:</th>
+                <td>{{cars_found.iloc[0]['Displacement']}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Seating:</th>
+                <td>{{cars_found.iloc[0]['Seating_Capacity']}}</td>
+                <th>Type:</th>
+                <td>{{cars_found.iloc[0]["Fuel_Type"]}}</td>
+              </tr>
+            </table>
           </div>
-        </div>
-        <div class="col-lg-6">
-          <!-- issue: remove background of this photo to load faster -->
-          <img
-            src="{{ url_for('static', filename='assets/img/Car2.jpg')}}"
-            class="img-fluid"
-            alt=""
-          />
+          <!-- End Tab 1 Content -->
+          {% endif %}
+
+          {% if count>1 %}
+          <div class="tab-pane fade show" id="tab1">
+            <table class="table">
+              <tr>
+                <th scope="row">Brand:</th>
+                <td>{{cars_found.iloc[1]["Make"]}}</td>
+                <th>Price:</th>
+                <td>{{cars_found.iloc[1]["Ex-Showroom_Price"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Mileage:</th>
+                <td>{{cars_found.iloc[1]["ARAI_Certified_Mileage_kmpl"]}}</td>
+                <th>Engine:</th>
+                <td>{{cars_found.iloc[1]["Displacement"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Seating:</th>
+                <td>{{cars_found.iloc[1]["Seating_Capacity"]}}</td>
+                <th>Type:</th>
+                <td>{{cars_found.iloc[1]["Fuel_Type"]}}</td>
+              </tr>
+            </table>
+          </div>
+          {% endif %}
+          <!-- End Tab 2 Content -->
+
+          {% if count>2 %}
+          <div class="tab-pane fade show" id="tab2">
+            <table class="table">
+              <tr>
+                <th scope="row">Brand:</th>
+                <td>{{cars_found.iloc[2]["Make"]}}</td>
+                <th>Price:</th>
+                <td>{{cars_found.iloc[2]["Ex-Showroom_Price"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Mileage:</th>
+                <td>{{cars_found.iloc[2]["ARAI_Certified_Mileage_kmpl"]}}</td>
+                <th>Engine:</th>
+                <td>{{cars_found.iloc[2]["Displacement"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Seating:</th>
+                <td>{{cars_found.iloc[2]["Seating_Capacity"]}}</td>
+                <th>Type:</th>
+                <td>{{cars_found.iloc[2]["Fuel_Type"]}}</td>
+              </tr>
+            </table>
+            >
+          </div>
+          {% endif %}
+
+
+          <!-- End Tab 3 Content -->
+          {% if count>3 %}
+          <div class="tab-pane fade show" id="tab3">
+            <table class="table">
+              <tr>
+                <th scope="row">Brand:</th>
+                <td>{{cars_found.iloc[3]["Make"]}}</td>
+                <th>Price:</th>
+                <td>{{cars_found.iloc[3]["Ex-Showroom_Price"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Mileage:</th>
+                <td>{{cars_found.iloc[3]["ARAI_Certified_Mileage_kmpl"]}}</td>
+                <th>Engine:</th>
+                <td>{{cars_found.iloc[3]["Displacement"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Seating:</th>
+                <td>{{cars_found.iloc[3]["Seating_Capacity"]}}</td>
+                <th>Type:</th>
+                <td>{{cars_found.iloc[3]["Fuel_Type"]}}</td>
+              </tr>
+            </table>
+          </div>
+          {% endif %}
+          <!-- End Tab 4 Content -->
+          {% if count>4 %}
+          <div class="tab-pane fade show" id="tab4">
+            <table class="table">
+              <tr>
+                <th scope="row">Brand:</th>
+                <td>{{cars_found.iloc[4]["Make"]}}</td>
+                <th>Price:</th>
+                <td>{{cars_found.iloc[4]["Ex-Showroom_Price"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Mileage:</th>
+                <td>{{cars_found.iloc[4]["ARAI_Certified_Mileage_kmpl"]}}</td>
+                <th>Engine:</th>
+                <td>{{cars_found.iloc[4]["Displacement"]}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Seating:</th>
+                <td>{{cars_found.iloc[4]["Seating_Capacity"]}}</td>
+                <th>Type:</th>
+                <td>{{cars_found.iloc[4]["Fuel_Type"]}}</td>
+              </tr>
+            </table>
+          </div>
+          {% endif %}
+          <!-- End Tab 5 Content -->
         </div>
       </div>
-      <!-- End Feature Tabs -->
+      <div class="col-lg-6">
+        <!-- issue: remove background of this photo to load faster -->
+        <img
+          src="{{ url_for('static', filename='assets/img/Car2.jpg')}}"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
     </div>
+    <!-- End Feature Tabs -->
   </section>
   <!-- End Whats Your Car Section -->
-
-  {% endblock %}
+{% endblock %}
 </main>
