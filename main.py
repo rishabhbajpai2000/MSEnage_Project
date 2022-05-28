@@ -48,7 +48,7 @@ def home():
         if (type(cars_searched) == int):
             if (cars_searched == 1):
                 cars_line = "We were not able to find a car that meets your expectations, but here are our best cars if you want."
-                return render_template("index.html",inp_data= inp_data, cars_line = cars_line, cars_found = top_cars, count = len(cars_searched))
+                return render_template("index.html",inp_data= inp_data, cars_line = cars_line, cars_found = top_cars, count = 5)
 
         if (type(cars_searched) == str):
             return render_template("index.html", cars_line = cars_searched, inp_data= inp_data, count = 0 )
