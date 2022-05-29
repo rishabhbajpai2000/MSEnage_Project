@@ -1,4 +1,5 @@
 # reading the file
+from turtle import right
 import pandas as pd
 main_data = pd.read_csv("Data.csv")
 
@@ -6,13 +7,23 @@ main_data = pd.read_csv("Data.csv")
 # making the values of the as float from intger.  
 main_data["ARAI_Certified_Mileage_kmpl"].astype(float)
 main_data["Ex-Showroom_Price"].astype(int)
+
 # removing the duplicates based on the rows
 main_data = main_data.drop_duplicates(subset="Model")
-# for now top cars = data.head
+
+# We have selected here the top cars of our collection
 top_cars =main_data[main_data['Model'].isin(["Scorpio", "Thar", "Xuv500", "Fortuner","Vitara Brezza"])]
-# average top cars 
-# testing the always returing some value function
+
+
 def cars(cost_min, cost_max, brand, mileage_min, mileage_max, p_d_cng, seating, data=main_data):
+    # input: various parameters of the form 
+    # output:
+            #  will return a dataframe if found the cars
+            #  will return 1 if found none
+            #  will return a string error if there is some error with the data inputted
+
+
+    # if the input given is not right
     #simple validating the inputs
     try:
         cost_min = int(cost_min)
@@ -32,6 +43,12 @@ def cars(cost_min, cost_max, brand, mileage_min, mileage_max, p_d_cng, seating, 
         return "you have entered invalid max mileage, please re-enter"
 
     
+
+    # filtering the data with the input given
+    # filtering is taking place sequentially, 
+    # variable name convention:
+    # filter_p will contain the cars that are in the given cost range
+    # filter_b_p will have tha cars with given brand and given ex showroom price 
     
     filter_p = data[data["Ex-Showroom_Price"].isin(range(cost_min, cost_max))]
     if (len(filter_p) == 0):
