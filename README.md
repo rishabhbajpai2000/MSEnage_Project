@@ -10,19 +10,9 @@
 - [How to run the project locally?](#how-to-run-the-project-locally)
 
 # CarNow 
- - The project is hosted on [google cloud.](https://flask-app-cars.el.r.appspot.com/)
- - This project was developed in Microsoft Engage program, within a given span of 21 days
  - It is a car recemmendation system system which recemmends the best cars available in the data when requirements are given.
- - It has a minimalistic landing page
-  
- - It shows the list of top five cars available in the collection by defult
- - Once the requirements form is filled the list updates with the cars that meet upto the demands
+ - This project was developed in Microsoft Engage program, within a given span of 21 days
 
- -  It is also able to handle the edge cases when the form is filled empty
-
- -  Or when there are no cars which meets the requirements of the user
- 
- - The system also generates a description of each car that comes out of the database. 
 
 
 
@@ -47,6 +37,17 @@
 
 
 # Features
+ - The project is hosted on [google cloud.](https://flask-app-cars.el.r.appspot.com/)
+ - It has a minimalistic landing page
+  
+ - It shows the list of top five cars available in the collection by defult
+ - Once the requirements form is filled the list updates with the cars that meet upto the demands
+
+ -  It is also able to handle the edge cases when the form is filled empty
+
+ -  Or when there are no cars which meets the requirements of the user
+ 
+ - The system also generates a description of each car that comes out of the database. 
 
 
 
@@ -64,8 +65,8 @@
 6. Now run the command to install the dependencies listed within requirements.txt folder
    `pip install -r requirements.txt`
 7. once the dependencies are installed you need to run
-   `python app.py`
+   `python main.py`
    to the run code on your local server
 
-   You can also watch this video demo to see the steps to run the project locally
-
+   You can also watch this [video demo](https://youtu.be/zQIXy-9lV18)(2x speed can work as well) to see the steps to run the project locally
+   
