@@ -52,14 +52,15 @@
 
 
 # How to run the project locally?
+(these instructions works best if the system is windows, for MacOS, you need to make changes accordingly)
 
 1. Clone this repository in your system with the command below in your terminal.
     `git clone https://github.com/rishabhbajpai2000/MSEnage_Project.git`
-2. Move into the folder where the data is
+2. Move into the folder where the data of repo is 
 3. In your terminal install virtualenv with 
-   `pip install viertualenv`
-4. The make an environment with 
-   `virtualenv env`
+   `pip install virtualenv`
+4. Then make an environment with 
+   `virtualenv env` 
 5. activate the environment with going into the environment with 
    `.\env\Scripts\activate.ps1`
 6. Now run the command to install the dependencies listed within requirements.txt folder
