@@ -1,5 +1,5 @@
 Analysis_part/
 env/
 Website_template/
-_pycache_/
+__pycache__/
 .vscode/
