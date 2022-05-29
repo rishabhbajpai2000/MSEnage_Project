@@ -12,6 +12,7 @@
 # CarNow 
  - It is a car recemmendation system system which recemmends the best cars available in the data when requirements are given.
  - This project was developed in Microsoft Engage program, within a given span of 21 days
+ - Project demo [video](https://www.youtube.com/watch?v=E29g5AlZ4nM)
 
 
 
@@ -39,15 +40,27 @@
 # Features
  - The project is hosted on [google cloud.](https://flask-app-cars.el.r.appspot.com/)
  - It has a minimalistic landing page
+ <img width="952" alt="image" src="https://user-images.githubusercontent.com/64163517/170878115-9b180672-d655-4d8e-b516-c3661a889698.png">
+
   
  - It shows the list of top five cars available in the collection by defult
+ <img width="873" alt="image" src="https://user-images.githubusercontent.com/64163517/170878128-c6739876-f7d7-4050-aa8e-294e5b7b35d2.png">
+
  - Once the requirements form is filled the list updates with the cars that meet upto the demands
+ <img width="886" alt="image" src="https://user-images.githubusercontent.com/64163517/170878213-ce106be7-7572-43b9-b38b-26e3295413b9.png">
+
 
  -  It is also able to handle the edge cases when the form is filled empty
+ <img width="925" alt="image" src="https://user-images.githubusercontent.com/64163517/170878227-6fec4872-1377-49db-863f-ed9a8becb2ed.png">
 
- -  Or when there are no cars which meets the requirements of the user
- 
- - The system also generates a description of each car that comes out of the database. 
+
+   -  Or when there are no cars which meets the requirements of the user
+   <img width="872" alt="image" src="https://user-images.githubusercontent.com/64163517/170878254-8d704136-0c11-484a-94aa-74934192e440.png">
+
+
+   - The system also generates a description of each car that comes out of the database. 
+
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/64163517/170878271-54fb31a4-62d0-4927-83e4-dbdf31512b3b.png">
 
 
 
